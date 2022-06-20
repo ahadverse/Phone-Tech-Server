@@ -19,11 +19,12 @@ const stripe = require('stripe')(process.env.STRIPE_KEY)
 
 // app.use(cors({origin : 'https://assignment-12-42953.web.app' , optionsSuccessStatus: 200}))
 
-var corsOptions = {
-  origin: 'https://assignment-12-42953.web.app',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
-// app.use(cors())
+// var corsOptions = {
+//   origin: 'https://assignment-12-42953.web.app',
+//   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+// }
+
+app.use(cors())
 app.use(express.json())
 
 // app.use('*', cors())
